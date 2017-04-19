@@ -1,9 +1,14 @@
-# api documentation for  [raf (v3.3.0)](https://github.com/chrisdickinson/raf#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-raf.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-raf) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-raf.svg)](https://travis-ci.org/npmdoc/node-npmdoc-raf)
+# npmdoc-raf
+
+#### api documentation for  [raf (v3.3.0)](https://github.com/chrisdickinson/raf#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-raf.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-raf) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-raf.svg)](https://travis-ci.org/npmdoc/node-npmdoc-raf)
+
 #### requestAnimationFrame polyfill for node and the browser
 
-[![NPM](https://nodei.co/npm/raf.png?downloads=true)](https://www.npmjs.com/package/raf)
+[![NPM](https://nodei.co/npm/raf.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/raf)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-raf/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-raf_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-raf/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-raf/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-raf/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-raf/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-raf/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-raf/build/screenCapture.npmPackageListing.svg)
 
@@ -17,16 +22,14 @@
 
 {
     "author": {
-        "name": "Chris Dickinson",
-        "email": "chris@neversaw.us"
+        "name": "Chris Dickinson"
     },
     "bugs": {
         "url": "https://github.com/chrisdickinson/raf/issues"
     },
     "contributors": [
         {
-            "name": "Christian Maughan Tegnér",
-            "email": "christian.tegner@gmail.com"
+            "name": "Christian Maughan Tegnér"
         }
     ],
     "dependencies": {
@@ -53,17 +56,14 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "chrisdickinson",
-            "email": "chris@neversaw.us"
+            "name": "chrisdickinson"
         },
         {
-            "name": "cmtegner",
-            "email": "christian.tegner@gmail.com"
+            "name": "cmtegner"
         }
     ],
     "name": "raf",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/chrisdickinson/raf.git"
@@ -91,77 +91,6 @@
     },
     "version": "3.3.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module raf](#apidoc.module.raf)
-1.  [function <span class="apidocSignatureSpan">raf.</span>cancel ()](#apidoc.element.raf.cancel)
-1.  [function <span class="apidocSignatureSpan">raf.</span>polyfill ()](#apidoc.element.raf.polyfill)
-
-
-
-# <a name="apidoc.module.raf"></a>[module raf](#apidoc.module.raf)
-
-#### <a name="apidoc.element.raf.cancel"></a>[function <span class="apidocSignatureSpan">raf.</span>cancel ()](#apidoc.element.raf.cancel)
-- description and source-code
-```javascript
-cancel = function () {
-  caf.apply(root, arguments)
-}
-```
-- example usage
-```shell
-...
-var raf = require('raf')
-'''
-
-## var handle = raf(callback)
-
-'callback' is the function to invoke in the next frame. 'handle' is a long integer value that uniquely identifies the entry in the
- callback list. This is a non-zero value, but you may not make any other assumptions about its value.
-
-## raf.cancel(handle)
-
-'handle' is the entry identifier returned by 'raf()'. Removes the queued animation frame callback (other queued callbacks will still
- be invoked unless cancelled).
-
-## raf.polyfill()
-
-Shorthand to polyfill 'window.requestAnimationFrame' and 'window.cancelAnimationFrame' if necessary (Polyfills 'global' in node).
-...
-```
-
-#### <a name="apidoc.element.raf.polyfill"></a>[function <span class="apidocSignatureSpan">raf.</span>polyfill ()](#apidoc.element.raf.polyfill)
-- description and source-code
-```javascript
-polyfill = function () {
-  root.requestAnimationFrame = raf
-  root.cancelAnimationFrame = caf
-}
-```
-- example usage
-```shell
-...
-
-'callback' is the function to invoke in the next frame. 'handle' is a long integer value that uniquely identifies the entry in the
- callback list. This is a non-zero value, but you may not make any other assumptions about its value.
-
-## raf.cancel(handle)
-
-'handle' is the entry identifier returned by 'raf()'. Removes the queued animation frame callback (other queued callbacks will still
- be invoked unless cancelled).
-
-## raf.polyfill()
-
-Shorthand to polyfill 'window.requestAnimationFrame' and 'window.cancelAnimationFrame' if necessary (Polyfills 'global' in node).
-
-Alternatively you can require 'raf/polyfill' which will act the same as 'require('raf').polyfill()'.
-
-# Acknowledgments
-...
 ```
 
 
